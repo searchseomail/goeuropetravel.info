@@ -1,0 +1,70 @@
+/* THEME 5: BICCAS STYLE */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg-main: #F9FDFB; /* Едва заметный зеленоватый фон */
+  --bg-card: #FFFFFF;
+  --bg-header: #F9FDFB;
+  --accent: #05C189; /* Бирюзово-зеленый (Mint) */
+  --text-main: #1A1919;
+  --text-gray: #A6A6A6;
+  --border-color: #EFEFEF;
+  --font-main: 'Poppins', sans-serif;
+  --font-heading: 'Poppins', sans-serif;
+  --shadow-sm: 0 15px 35px rgba(5, 193, 137, 0.05); /* Цветная легкая тень */
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body { font-family: var(--font-main); background-color: var(--bg-main); color: var(--text-gray); line-height: 1.7; display: flex; flex-direction: column; min-height: 100vh; }
+
+a { text-decoration: none; color: inherit; transition: all 0.3s ease; }
+a:hover { color: var(--accent); }
+
+h1, h2, h3, h4 { color: var(--text-main); font-family: var(--font-heading); font-weight: 700; letter-spacing: -0.5px; }
+
+.container { max-width: 1280px; margin: 0 auto; padding: 0 30px; width: 100%; }
+
+.site-header { background: var(--bg-header); padding: 15px 0; position: sticky; top: 0; z-index: 100; }
+.header-top { display: flex; justify-content: space-between; align-items: center; padding: 10px 30px; max-width: 1280px; margin: 0 auto; }
+.logo { font-size: 2rem; font-weight: 700; color: var(--accent); display: flex; align-items: center; }
+
+.header-nav { display: flex; justify-content: center; }
+.nav-links { display: flex; justify-content: center; gap: 40px; padding: 10px; }
+.nav-links a { color: var(--text-main); font-weight: 500; font-size: 1rem; }
+
+.bottom-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 35px; margin: 60px 0; }
+
+.post-thumb-card { 
+  position: relative; background: var(--bg-card); 
+  border: 1px solid var(--border-color); 
+  border-radius: 20px; /* Сильное скругление */
+  display: flex; flex-direction: column; justify-content: flex-start; 
+  padding: 35px; transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  box-shadow: var(--shadow-sm); 
+  min-height: 280px; 
+}
+.post-thumb-card:hover { transform: translateY(-10px); box-shadow: 0 25px 45px rgba(5, 193, 137, 0.15); }
+
+.cat-badge { background: rgba(5, 193, 137, 0.1); color: var(--accent); padding: 8px 16px; font-size: 0.8rem; font-weight: 600; border-radius: 30px; display: inline-block; margin-bottom: 25px; width: fit-content; }
+
+.post-thumb-title { color: var(--text-main); font-size: 1.3rem; line-height: 1.4; font-weight: 600; }
+
+.post-container { max-width: 850px; margin: 60px auto; background: var(--bg-card); padding: 60px; border-radius: 30px; box-shadow: var(--shadow-sm); border: none; }
+.post-h1 { font-size: 3.5rem; line-height: 1.2; margin-bottom: 25px; text-align: center; }
+.post-meta-info { display: flex; align-items: center; justify-content: center; gap: 20px; padding-bottom: 30px; margin-bottom: 30px; border-bottom: 1px solid var(--border-color); font-size: 1rem; color: var(--text-main); font-weight: 500; }
+.post-meta-info img { width: 50px; height: 50px; border-radius: 15px; object-fit: cover; } /* Квадратные аватарки со скруглением */
+.post-content { font-size: 1.15rem; line-height: 1.8; color: #555; }
+.post-content h2 { font-size: 2.2rem; margin: 50px 0 20px; color: var(--text-main); }
+.post-content p { margin-bottom: 25px; }
+.post-content a { color: var(--accent); font-weight: 600; text-decoration: none; border-bottom: 2px dashed var(--accent); }
+
+.pagination { display: flex; justify-content: center; gap: 12px; margin: 30px 0 80px; }
+.page-link { width: 45px; height: 45px; display: flex; justify-content: center; align-items: center; border: none; background: #FFF; box-shadow: 0 5px 15px rgba(0,0,0,0.05); color: var(--text-main); border-radius: 50%; font-weight: 600; transition: 0.3s; }
+.page-link:hover { background: var(--accent); color: #FFF; }
+.page-link.active { background: var(--accent); color: #FFF; box-shadow: 0 10px 20px rgba(5, 193, 137, 0.3); }
+
+.site-footer { background: var(--bg-card); padding: 80px 0 30px; margin-top: auto; border-top: 1px solid var(--border-color); }
+.footer-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; max-width: 1280px; margin: 0 auto; padding: 0 30px; }
+.footer-title { margin-bottom: 25px; font-weight: 600; color: var(--text-main); font-size: 1.2rem; }
+.footer-bottom { text-align: center; margin-top: 60px; padding-top: 25px; font-size: 0.9rem; color: var(--text-gray); }
